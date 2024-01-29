@@ -56,13 +56,14 @@ const CoursesPage = () => {
     return typeMatches && searchMathes;
     }
   )    
-  if (isSplashed) {
+  if (isSplashed || isLoadingCourses || isLoadingUsers) {
     return <Loader/>;
   }
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl mb-4">Course Users</h1>
+      <div className='contain'>
       <select
         className="p-2 border border-gray-300 rounded mr-2"
         onChange={(e) => setSelectedCourse(e.target.value)}
@@ -86,7 +87,7 @@ const CoursesPage = () => {
       >
         Export
       </button>
-
+      </div>
       {isLoadingUsers ? (
         <TableLoader />
       ) : (
