@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {useState} from 'react';
 import { useQuery } from 'react-query';
 import { saveAs } from 'file-saver';
-import {RotatingLines} from 'react-loader-spinner'
+
 import Table from '../components/Table';
 import Loader from '../components/Loader';
 import TableLoader from '../components/TableLoader';
